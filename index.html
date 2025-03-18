@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-image: url(https://media.geeksforgeeks.org/wp-content/uploads/20230310155650/Perimeter-of-Rectangle-2.png);
+        background-size:inherit;
+        font-size:xx-large;
+      }
+
+      .mainDiv {
+        margin: 30vh 30vw;
+        padding: 30px;
+        height: 400px;
+        width: 700px;
+        /* background-color: blue; */
+      }
+
+      .inputDiv{
+        display: flex;
+        justify-content: space-around;
+        /* margin-bottom: 40px; */
+      }
+      button{
+        margin: 70px 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainDiv">
+      <div class="inputDiv">
+        <input class="input-group bg-dark w-25 fs-4 text-end text-light" id="inputLenght" type="number" placeholder="Input lenght" />
+        <input class="input-group bg-dark w-25 fs-4 text-end text-light" id="inputWidth" type="number" placeholder="Input width" />
+      </div>
+      <button class="btn btn-dark fs-3 " onclick="perimeter()">CALCULATE PERIMETER</button>
+      <p class="text-bg-info fs-1" id="displayResult"></p>
+    </div>
+  </body>
+  <script>
+    let inputLenght = document.getElementById("inputLenght");
+    let inputWidth = document.getElementById("inputWidth");
+    let displayResult = document.getElementById("displayResult");
+
+    function perimeter() {
+      let inputLenght_1 = Number(inputLenght.value);
+      let inputWidth_1 = Number(inputWidth.value);
+      if (
+        isNaN(inputLenght_1) ||
+        isNaN(inputWidth_1) ||
+        inputLenght_1 <= 0 ||
+        inputWidth_1 <= 0
+      ) {
+        alert("INPUT A VALID POSITIVE NUMBERS GREATER THAN ZERO");
+      } else {
+        const perimeterOfRect = 2 * (inputLenght_1 + inputWidth_1);
+        displayResult.innerHTML = `The perimeter of the rectangle is ${perimeterOfRect}`;
+      }
+      inputLenght.value = "";
+      inputWidth.value = "";
+    }
+  </script>
+</html>
