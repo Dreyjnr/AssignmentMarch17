@@ -13,8 +13,8 @@
     <style>
       body {
         background-image: url(https://media.geeksforgeeks.org/wp-content/uploads/20230310155650/Perimeter-of-Rectangle-2.png);
-        background-size:inherit;
-        font-size:xx-large;
+        background-size: inherit;
+        font-size: xx-large;
       }
 
       .mainDiv {
@@ -22,15 +22,13 @@
         padding: 30px;
         height: 400px;
         width: 700px;
-        /* background-color: blue; */
       }
 
-      .inputDiv{
+      .inputDiv {
         display: flex;
         justify-content: space-around;
-        /* margin-bottom: 40px; */
       }
-      button{
+      button {
         margin: 70px 250px;
       }
     </style>
@@ -38,10 +36,22 @@
   <body>
     <div class="mainDiv">
       <div class="inputDiv">
-        <input class="input-group bg-dark w-25 fs-4 text-end text-light" id="inputLenght" type="number" placeholder="Input lenght" />
-        <input class="input-group bg-dark w-25 fs-4 text-end text-light" id="inputWidth" type="number" placeholder="Input width" />
+        <input
+          class="input-group bg-dark w-25 fs-4 text-end text-light"
+          id="inputLenght"
+          type="number"
+          placeholder="Input lenght"
+        />
+        <input
+          class="input-group bg-dark w-25 fs-4 text-end text-light"
+          id="inputWidth"
+          type="number"
+          placeholder="Input width"
+        />
       </div>
-      <button class="btn btn-dark fs-3 " onclick="perimeter()">CALCULATE PERIMETER</button>
+      <button class="btn btn-dark fs-3" onclick="perimeter()">
+        CALCULATE PERIMETER
+      </button>
       <p class="text-bg-info fs-1" id="displayResult"></p>
     </div>
   </body>
